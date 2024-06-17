@@ -8,7 +8,7 @@ public class OopsLogicTest {
         for (int i = 1; i <= rows; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j);
-            }git st
+            }
             System.out.println();
         }
         System.out.println();
