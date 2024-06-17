@@ -8,17 +8,17 @@ public class OopsLogicTest {
         for (int i = 1; i <= rows; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j);
-            }
+            }git st
             System.out.println();
         }
-        System.out.println("");
+        System.out.println();
         for (int i = rows; i >= 1; i--) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j);
             }
             System.out.println();
         }
-        System.out.println("");
+        System.out.println();
         int num = 1;
         int max = 4;
 
@@ -29,7 +29,7 @@ public class OopsLogicTest {
             }
             System.out.println();
         }
-        System.out.println("");
+        System.out.println();
         int row = 4;
 
         for (int i = 1; i <= row; i++) {
