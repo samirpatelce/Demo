@@ -42,7 +42,7 @@ public class Dropdown {
         driver.findElement(By.id("btnclosepaxoption")).click();
         Thread.sleep(2000);
 
-        //Dynamic Drop-Down
+//        Dynamic Drop-Down
         driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
         driver.findElement(By.xpath("//div[@id='ctl00_mainContent_ddl_originStation1_CTNR']//a[@value='BLR']")).click();
         Thread.sleep(3000);
@@ -63,6 +63,7 @@ public class Dropdown {
             }
         }
         Thread.sleep(3000);
+
         //Checkbox
         Assert.assertFalse(driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
         driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).click();
@@ -70,6 +71,20 @@ public class Dropdown {
         System.out.println(driver.findElements(By.xpath("//input[@type='checkbox']")).size());
         Thread.sleep(3000);
 
+//        select radio button
+        driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
+        if(driver.findElement(By.id("Div1")).getAttribute("style").contains("1"))
+        {
+            System.out.println("its enabled");
+            Assert.assertTrue((true));
+        } else {
+            System.out.println("its enableded");
+            Assert.assertTrue(false);
+        }
+        System.out.println(driver.findElement(By.name("ctl00$mainContent$view_date2")).isEnabled());
+//        Date Select
+        driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight")).click();
+        Thread.sleep(3000);
         driver.quit();
     }
 }
