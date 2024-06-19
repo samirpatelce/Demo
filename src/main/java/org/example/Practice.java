@@ -26,5 +26,6 @@ public class Practice {
         driver.findElement(By.cssSelector(".btn.btn-success")).click();
         String text = driver.findElement(By.cssSelector(".alert.alert-success.alert-dismissible")).getText();
         System.out.println(text);
+
     }
 }
