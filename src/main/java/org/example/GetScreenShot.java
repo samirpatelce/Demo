@@ -16,6 +16,7 @@ public class GetScreenShot {
         driver.manage().window().maximize();
         driver.get("https://www.google.com/");
         ss(driver, "C:\\Users\\Samir\\Downloads\\1.png");
+        driver.quit();
     }
 
     public static void ss(WebDriver driver, String filePath) throws IOException {
