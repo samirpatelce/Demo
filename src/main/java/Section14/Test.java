@@ -1,6 +1,7 @@
 package Section14;
 
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 public class Test {
     @org.testng.annotations.Test
@@ -32,6 +33,15 @@ public class Test {
         Long c = name.stream().filter(s->s.startsWith("A")).count();
         System.out.println(c);
 
+        long d = Stream.of("Abhijit", "Abhi", "bansal", "Ram").filter(s->
+        {
+            s.startsWith("A");
+            return true;
+        }).count();
+        System.out.println(d);
+
+        name.stream().filter(s->s.length()>4).forEach(s-> System.out.println(s));
+        name.stream().filter(s->s.length()>4).limit(1).forEach(s-> System.out.println(s));
 
     }
 }
