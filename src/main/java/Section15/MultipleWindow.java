@@ -27,5 +27,6 @@ public class MultipleWindow {
         name.sendKeys(courseName);
         File file = name.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file, new File("logo.png"));
+        driver.close();
     }
 }
